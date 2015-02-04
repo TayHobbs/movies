@@ -2,8 +2,6 @@ SearchComponent = Ember.Component.extend
   search: ""
   titleFilter: null
   searchField: ""
-  moreInfo: false
-  managersList: []
 
   searchFieldWatcher: ( ->
     searchField = @searchField
@@ -17,7 +15,6 @@ SearchComponent = Ember.Component.extend
     content.filter (movie) ->
       movie.title.toLowerCase().indexOf(search.toLowerCase()) isnt -1
   ).property("search", "content", "titleFilter")
-
 
   actions:
 

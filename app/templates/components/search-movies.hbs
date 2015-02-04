@@ -1,8 +1,14 @@
 {{input value=searchField}}
 {{#each movie in arrangedContent}}
-  {{movie.title}}
-  <img {{bind-attr src="movie.posters.detailed"}} />
+  <div>
+    <img {{bind-attr src="movie.posters.detailed"}} />
+  </div>
+  {{movie.title}}<br>
+  Runtime: {{movie.runtime}} minutes<br>
+  Rating: {{movie.mpaa_rating}}<br>
+  Critics Score:{{movie.ratings.critics_score}}<br>
+  Audience Score: {{movie.ratings.audience_score}}<br>
+  Release Date:{{movie.release_dates.dvd}}<br>
 {{else}}
   Nothing to see here
 {{/each}}
-
