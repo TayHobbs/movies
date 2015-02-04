@@ -1,0 +1,13 @@
+!_TAG_FILE_FORMAT	2	/extended format/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Łukasz Korecki	/lukasz@coffeesounds.com/
+!_TAG_PROGRAM_NAME	CoffeeTags	//
+!_TAG_PROGRAM_URL	https://github.com/lukaszkorecki/CoffeeTags	/GitHub repository/
+!_TAG_PROGRAM_VERSION	0.5.0	//
+_ajax	app/mixins/ajax.coffee	/^  _ajax: (params) ->$/;"	f	line:5	language:coffee	object:window
+do	app/routes/index.coffee	/^        done: (data) ->$/;"	b	line:11	language:coffee
+done	app/routes/index.coffee	/^        done: (data) ->$/;"	f	line:11	language:coffee	object:model
+fail	app/routes/index.coffee	/^        fail: (data) ->$/;"	f	line:15	language:coffee	object:model
+if	app/mixins/ajax.coffee	/^      if jqXHR.responseText$/;"	b	line:16	language:coffee
+model	app/routes/index.coffee	/^  model: ->$/;"	f	line:5	language:coffee	object:window
+pushErrors	app/mixins/ajax.coffee	/^  pushErrors: (jqXHR, errors) ->$/;"	f	line:14	language:coffee	object:window
