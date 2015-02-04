@@ -11,7 +11,7 @@ Router.map ->
     @route 'showing', path: 'now-showing'
     @route 'opening'
     @route 'coming', path: 'coming-soon'
-  @resouce 'dvd', ->
+  @resource 'dvd', ->
     @route 'rental', path: 'top-rentals'
     @route 'available', path: 'available-now'
     @route 'new'
