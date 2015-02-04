@@ -7,6 +7,15 @@ Router = Ember.Router.extend
 
 Router.map ->
   @route 'index', path: '/'
+  @resource 'theaters', ->
+    @route 'showing', path: 'now-showing'
+    @route 'opening'
+    @route 'coming', path: 'coming-soon'
+  @resouce 'dvd', ->
+    @route 'rental', path: 'top-rentals'
+    @route 'available', path: 'available-now'
+    @route 'new'
+    @route 'upcoming', path: 'coming-soon'
 
 
 `export default Router;`
