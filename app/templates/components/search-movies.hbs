@@ -1,0 +1,8 @@
+{{input value=searchField}}
+{{#each movie in arrangedContent}}
+  {{movie.title}}
+  <img {{bind-attr src="movie.posters.detailed"}} />
+{{else}}
+  Nothing to see here
+{{/each}}
+
