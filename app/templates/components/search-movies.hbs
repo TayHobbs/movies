@@ -1,3 +1,4 @@
+{{#link-to 'index'}}Index{{/link-to}}
 {{input value=searchField}}
 {{#each movie in arrangedContent}}
   <div>
@@ -8,7 +9,10 @@
   Rating: {{movie.mpaa_rating}}<br>
   Critics Score:{{movie.ratings.critics_score}}<br>
   Audience Score: {{movie.ratings.audience_score}}<br>
-  Release Date:{{movie.release_dates.dvd}}<br>
+  {{#if movie.release_dates.dvd}}
+    DvD Release Date:{{movie.release_dates.dvd}}<br>
+  {{/if}}
+  Theater Release Date:{{movie.release_dates.theater}}<br>
 {{else}}
   Nothing to see here
 {{/each}}
