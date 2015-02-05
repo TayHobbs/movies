@@ -2,6 +2,7 @@ SearchComponent = Ember.Component.extend
   search: ""
   titleFilter: null
   searchField: ""
+  movie : null
 
   searchFieldWatcher: ( ->
     searchField = @searchField
@@ -22,5 +23,11 @@ SearchComponent = Ember.Component.extend
       query = @get("search")
       @set "titleFilter", query
       return
+
+    showDetail: (movie) ->
+      @set 'movie', movie
+
+    closeDetail: ->
+      @set 'movie', null
 
 `export default SearchComponent`

@@ -1,6 +1,9 @@
 {{#link-to 'index'}}Index{{/link-to}}
 {{input value=searchField}}
 {{#each movie in arrangedContent}}
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#movie-detail" {{action "showDetail" movie}}>
+  More Info
+</button>
   <div>
     <img {{bind-attr src="movie.posters.detailed"}} />
   </div>
@@ -16,3 +19,20 @@
 {{else}}
   Nothing to see here
 {{/each}}
+
+<div class="modal fade" id="movie-detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{movie.title}}</h4>
+      </div>
+      <div class="modal-body">
+        {{movie.title}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
