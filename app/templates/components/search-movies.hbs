@@ -15,7 +15,22 @@
         {{movie.title}}
       </div>
       <div class="title">
-        {{movie.ratings.critics_score}} {{movie.ratings.audience_score}}
+        <div class="critic-score">
+          {{#if movie.criticApproved}}
+            <img class="rating-image" src="/assets/images/fresh-16.png" alt="bad-popcorn">
+          {{else}}
+            <img class="rating-image" src="/assets/images/splat-16.png" alt="bad-popcorn">
+          {{/if}}
+          {{movie.ratings.critics_score}}
+        </div>
+        <div class="audience-score">
+          {{#if movie.audienceApproved}}
+            <img class="rating-image" src="/assets/images/popcorn-16.png" alt="bad-popcorn">
+          {{else}}
+            <img class="rating-image" src="/assets/images/badpopcorn-16.png" alt="bad-popcorn">
+          {{/if}}
+          {{movie.ratings.audience_score}}
+        </div>
       </div>
     </div>
   {{else}}

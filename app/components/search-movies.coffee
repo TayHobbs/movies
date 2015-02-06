@@ -17,6 +17,15 @@ SearchComponent = Ember.Component.extend
       movie.title.toLowerCase().indexOf(search.toLowerCase()) isnt -1
   ).property("search", "content", "titleFilter")
 
+  criticAndAudienceScore: ( ->
+    @get('content').map( (movie) =>
+      if movie.ratings.critics_score >= 65
+        movie.criticApproved = true
+      if movie.ratings.audience_score >= 65
+        movie.audienceApproved = true
+    )
+  ).on('init')
+
   actions:
 
     query: ->

@@ -1,4 +1,8 @@
 @import "../../bower_components/bootstrap-material-design/less/material-wfont.less";
+
+// Override @primary color with one took from _colors.less
+@primary: @light-blue;
+
 body {
     background-color: white;
 }
@@ -71,6 +75,16 @@ h1 {
     float: right;
 }
 
+.rating-image {
+    max-width: 20px;
+}
 
-// Override @primary color with one took from _colors.less
-@primary: @light-blue;
+.critic-score {
+    display: inline-block;
+    padding: 5px;
+}
+
+.audience-score {
+    display: inline-block;
+    padding: 5px;
+}
