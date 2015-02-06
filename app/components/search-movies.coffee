@@ -1,6 +1,5 @@
 SearchComponent = Ember.Component.extend
   search: ""
-  titleFilter: null
   searchField: ""
   movie : null
 
@@ -15,7 +14,7 @@ SearchComponent = Ember.Component.extend
     return content unless search
     content.filter (movie) ->
       movie.title.toLowerCase().indexOf(search.toLowerCase()) isnt -1
-  ).property("search", "content", "titleFilter")
+  ).property("search", "content")
 
   criticAndAudienceScore: ( ->
     @get('content').map( (movie) =>
@@ -27,11 +26,6 @@ SearchComponent = Ember.Component.extend
   ).on('init')
 
   actions:
-
-    query: ->
-      query = @get("search")
-      @set "titleFilter", query
-      return
 
     showDetail: (movie) ->
       @set 'movie', movie
