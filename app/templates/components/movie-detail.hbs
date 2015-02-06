@@ -1,18 +1,36 @@
 <div class="modal fade" id="movie-detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">{{movie.title}}</h4>
+          <h4 class="modal-title" id="myModalLabel">{{movie.title}}</h4>
       </div>
       <div class="modal-body">
-        {{movie.title}}
-        Runtime: {{movie.runtime}} minutes<br>
-        {{#if movie.release_dates.dvd}}
-          DvD Release Date:{{movie.release_dates.dvd}}<br>
-        {{/if}}
-        Theater Release Date:{{movie.release_dates.theater}}<br>
-        Rating: {{movie.mpaa_rating}}<br>
+        <br>
+        <div class="col-sm-3">
+          <div class="poster">
+            <img {{bind-attr src="movie.posters.detailed"}} /><br>
+          </div>
+          <div class="left">Rated: {{movie.mpaa_rating}}</div>
+          <div class="right">{{movie.runtime}} minutes</div>
+          <br>
+          {{#if movie.release_dates.dvd}}
+          <div class="left">DvD:</div> <div class="right">{{movie.release_dates.dvd}}</div><br>
+          {{/if}}
+          <div class="left">Theater:</div>
+          <div class="right">{{movie.release_dates.theater}}</div>
+        </div>
+        <div class="col-xs-9">
+          {{movie.synopsis}}<br>
+          {{#if movie.abridged_cast}}
+            <h3>Cast:</h3>
+            {{#each actor in movie.abridged_cast}}
+            <div class="col-sm-6">
+              {{actor.name}}
+            </div>
+            {{/each}}
+          {{/if}}
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
