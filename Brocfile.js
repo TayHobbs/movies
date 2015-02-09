@@ -2,7 +2,12 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
+var app = new EmberApp({
+  vendorFiles: {
+    'handlebars.js': null
+  }
+});
+
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
@@ -22,5 +27,6 @@ app.import('bower_components/bootstrap-material-design/dist/css/material-wfont.m
 app.import('bower_components/bootstrap-material-design/dist/css/ripples.min.css');
 app.import('bower_components/bootstrap-material-design/dist/js/material.min.js');
 app.import('bower_components/bootstrap-material-design/dist/js/ripples.min.js');
+app.import("bower_components/ember-localstorage-adapter/localstorage_adapter.js");
 
 module.exports = app.toTree();
