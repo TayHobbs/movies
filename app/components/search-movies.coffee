@@ -17,12 +17,15 @@ SearchComponent = Ember.Component.extend
   ).property("search", "content")
 
   criticAndAudienceScore: ( ->
-    @get('content').map( (movie) =>
+    @get('content').map (movie) =>
       if movie.ratings.critics_score >= 65
         movie.criticApproved = true
+
+      if movie.ratings.critics_score < 0
+        movie.ratings.critics_score = 'N/A'
+
       if movie.ratings.audience_score >= 65
         movie.audienceApproved = true
-    )
   ).on('init')
 
   actions:
