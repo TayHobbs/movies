@@ -12,7 +12,7 @@
     "ember-qunit-notifications": "0.0.7",
     "qunit": "~1.17.1",
     "bootstrap": "~3.3.2",
-    "fauxjax": "~0.5.0",
+    "fauxjax": "~1.0.1",
     "bootstrap-material-design": "~0.2.2"
-  }
+  },
 }
