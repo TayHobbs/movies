@@ -2,7 +2,7 @@
   "name": "movies",
   "dependencies": {
     "jquery": "^2.1.1",
-    "ember": "1.11.0",
+    "ember": "1.11.1",
     "ember-resolver": "~0.1.14",
     "loader.js": "ember-cli/loader.js#3.2.0",
     "ember-cli-shims": "ember-cli/ember-cli-shims#0.0.3",
@@ -12,7 +12,7 @@
     "ember-qunit-notifications": "0.0.7",
     "qunit": "~1.17.1",
     "bootstrap": "~3.3.2",
-    "fauxjax": "~1.0.1",
+    "fauxjax": "~1.0.2",
     "bootstrap-material-design": "~0.2.2"
   }
 }
