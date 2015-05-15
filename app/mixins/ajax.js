@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Mixin.create({
-  flashMessages: Ember.inject.service("flashMessages"),
 
   _ajax: function(params) {
     return new Ember.RSVP.Promise(function(resolve, reject) {
