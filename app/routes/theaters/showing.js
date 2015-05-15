@@ -3,7 +3,7 @@ import Ajax from '../../mixins/ajax';
 
 export default Ember.Route.extend(Ajax, {
   model() {
-    Ember.RSVP.all([
+    return Ember.RSVP.all([
       this._ajax({
         type: 'GET',
         url: 'http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=',
