@@ -5,7 +5,7 @@ export default Ember.Route.extend(Ajax, {
   model() {
     return Ember.RSVP.all([
       this._ajax({
-        type: 'GET',
+        method: 'GET',
         url: 'http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/upcoming.json?apikey=',
         dataType: 'jsonp',
         done: function(data) {
