@@ -6,7 +6,7 @@
   </div>
 </div>
 <div class="row">
-  {{#each movie in arrangedContent}}
+  {{#each arrangedContent as |movie|}}
     <div class="col-sm-2 movie" data-toggle="modal" data-target="#movie-detail" {{action "showDetail" movie}}>
       <div class="poster">
         <img class="image" src="{{movie.posters.detailed}}" /><br>

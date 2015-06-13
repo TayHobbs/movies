@@ -24,7 +24,7 @@
           {{movie.synopsis}}<br>
           {{#if movie.abridged_cast}}
             <h3>Cast:</h3>
-            {{#each actor in movie.abridged_cast}}
+            {{#each movie.abridged_cast as |actor|}}
             <div class="col-sm-6">
               {{actor.name}}
             </div>
