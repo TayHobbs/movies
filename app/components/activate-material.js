@@ -1,10 +1,9 @@
-import Ember from 'ember';
+import Ember from 'ember'
 
-export default Ember.View.extend({
+export default Ember.Component.extend({
   didInsertElement: function() {
     Ember.$(document).ready(function() {
       Ember.$.material.init();
     });
   }
 });
-
