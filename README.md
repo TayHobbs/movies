@@ -7,13 +7,16 @@ A small web app to see what new movies are available in theater and on DvD, usin
 Built using Emberjs.
 
 
+## Running Locally
 
-##Running Locally
 
-
-To run locally you must first obtain your own Rotten Tomatoes API key.
+To run locally you must first obtain your own [Rotten Tomatoes API key](https://www.rottentomatoes.com/help_desk/proposalform).
 
 You must also have Ember-CLI.
 
-Then simply clone this repo, and `npm install`, `bower install` and `ember serve`,    
+- clone this repo
+- `npm install`
+- `bower install` 
+- `ember serve`
+
 visit localhost:4200 and you're golden.
